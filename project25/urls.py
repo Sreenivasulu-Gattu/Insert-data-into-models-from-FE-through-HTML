@@ -21,6 +21,7 @@ from app.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('form/',form,name='form'),
-    path('display_topic/',display_topic,name='display_topic')
-    #path('insert_webpage/',insert_webpage,name = '')
+    path('display_topic/',display_topic,name='display_topic'),
+    path('insert_webpage/',insert_webpage,name = 'insert_webpage'),
+    path('display_webpage/',display_webpage,name='display_webpage'),
 ]

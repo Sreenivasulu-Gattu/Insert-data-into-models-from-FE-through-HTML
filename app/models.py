@@ -10,11 +10,11 @@ class Topic(models.Model):
     def __str__(self):
         return self.topic_name
     
-'''class Webpage(models.Model):
+class Webpage(models.Model):
     topic_name = models.ForeignKey(Topic,on_delete = models.CASCADE)
     name = models.CharField(max_length = 100)
     url = models.URLField()
     email = models.EmailField(default = 'India@gmail.com')
 
     def __str__(self):
-        return self.name'''
+        return self.name

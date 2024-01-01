@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insert_access</title>
+</head>
+<body>
+    <center>
+        <h1>Insert the data into Access Record..</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <label for="n">Name</label>
+            <select name="n" id="n">
+                {% for ao in access %}
+                    <option value="{{ao.pk}}">{{ao.name}}</option>
+                {% endfor %}
+            </select><br><br>
+            
+            <label for="d">Date</label>
+            <input type="date" name="d" id="d"><br><br>
+
+            <label for="a">Author</label>
+            <input type="text" name="a" id="a"><br><br>
+
+            <input type="submit" value="Insert_access">
+        </form>
+    </center>
+</body>
+</html>

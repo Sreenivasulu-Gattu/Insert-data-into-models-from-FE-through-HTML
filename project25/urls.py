@@ -20,8 +20,11 @@ from app.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('form/',form,name='form'),
+    path('form/',form,name='form'),  # Insert topic.
     path('display_topic/',display_topic,name='display_topic'),
-    path('insert_webpage/',insert_webpage,name = 'insert_webpage'),
     path('display_webpage/',display_webpage,name='display_webpage'),
+    path('display_access/',display_access,name='display_access'),
+    path('insert_webpage/',insert_webpage,name = 'insert_webpage'),
+    path('select_multiple/',select_multiple,name='select_multiple'),
+    path('insert_access/',insert_access,name='insert_access'),
 ]
